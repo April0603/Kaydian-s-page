@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydian website</title>
+    <body>
+    <style>
+     h1 {
+        color: rgba(18, 18, 19, 0.938);
+        font-size: 60px;
+        text-decoration: underline;
+        font-weight: bolder;
+        text-align: center;
+      }
+      .you {
+        color:black;
+        font-size: 50px;
+      }
+      .me {
+        color:black;
+        font-size: 50px;
+      }.us{
+        color:yellowgreen;
+        font-size: 50px;
+      }
+      .code {
+        color: rgba(28, 0, 128, 0.863);
+        text-align: center;
+        font-weight: lighter;
+        font-size: 40px;
+      }
+        div {
+        background: radial-gradient(
+          circle,
+          rgba(14, 9, 9, 0.774),
+          green,
+          yellow
+        );
+        padding: 20px 60px 20px;
+        margin: auto;
+        width: 35cm;
+        border-radius: 4%;
+      }
+      button {
+        color: black;
+        text-align: center;
+        font-weight: 1000;
+        display: block;
+        margin: 0 auto 30px auto;
+        padding: 15px 18px 15px 18px;
+        background-color: rgba(148, 100, 237, 0);
+        border: 2px solid rgba(98, 43, 226, 0.336);
+        border-radius: 30px;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.123);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: rgba(0, 0, 0, 0.158);
+        color:yellowgreen;
+        cursor: pointer;
+      }
+      ul {
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0px;
+        margin-left: 0%;
+      }
+      .list-inline > li {
+        display: inline-block;
+        margin: 0.3cm;
+      }
+       img {
+        display: block;
+        margin: 0 auto;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      a {
+        text-decoration: none;
+      }
+      .link {
+        text-align: center;
+        color: rgba(122, 139, 214, 0.938);
+        margin: 15px;
+        font-size: 12px;
+      }
+      span {
+        color: rgb(243, 9, 9);
+      }
+        p {
+      color: rgb(3, 32, 161);
+      font-size: 100%;
+      text-align: right;
+    }
+      .footer {
+        text-align:right;
+      }
+    </style>
+</head>
+<div>
+<h1>
+   <strong>Your Future Awaits </strong> 
+</h1>
+<marquee><h2 class="free code ">Lets Journey Together.</h2><h3> Click the button below</h3></marquee>
+    <button>Lets get acquainted</button>
+     <ul class="list-inline">
+        <a class="free you" href="kaydian1.html" target="_blank"
+          >Teachers information</a
+        >
+      </li>
+    </br>
+      <li>
+        <a class="free me" href="Kaydian2.html" target="_blank">
+          Curriculum</a
+        >
+        </li>
+      </br>
+        <li>
+        <a class="free us" href="email.html" target="_blank">
+       Apply Here </a></li>
+       <marquee><img 
+       src="c:\Users\Michelle\OneDrive\Desktop\Kaydian website\IMG-20231019-WA0005[2521].jpg" width="500" height="300"
+       /></marquee>
+       <hr/>
+</ul>
+           <p class="footer">
+      This page is built by: MJT
+ </p>
+    </div>
+    <script>
+      function actionButton() {
+        let name = prompt("What is your name?");
+        let district = prompt("What district are you from?");
+        if (district === "") {
+          alert(
+            "Hi " +
+              name +
+              " , Welcome to a journey worthwhile taking"
+          );
+        } else {
+          alert(
+            "Hi " + name + " from " + district + " , lets get started"
+          );
+        }
+      }
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", actionButton);
+    </script>  
+</body>
+</html>
+
+

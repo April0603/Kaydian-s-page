@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><strong>Contact Us</strong></h1>
+    <p>We will get back to you within 24 to 48 hrs</p>
+    <div>
+      <form>
+        <div>
+          <input type="name" id="name" placeholder=" Sender Name" />
+        </div>
+        <div>
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div>
+          <input type="subect" id="subject" placeholder="Subject" />
+        </div>
+        <div>
+          <textarea id="message" cols="40" rows="8" required> </textarea>
+        </div>
+        <div>
+          <button onclick="sendMail();">Send</button>
+        </div>
+        <script>
+          function SendMail() {
+            (function () {
+              emailjs.init("muEmhCKin647dWHG1"); //account public key
+            })();
+            var params = {
+              sendername: document.querySelector("#sendername").value,
+              to: document.querySelector("lecture").value,
+              replyto: document.querySelector("#replyto").value,
+              subject: document.querySelector("#subject").value,
+              message: document.querySelector("#message").value,
+            };
+            var serviceID = "service_fn8y7wz"; //email service ID
+            var templateID = "template_ub2bung"; //email template ID
+
+            emailjs
+              .send(serviceID, templateID, params)
+              .then((res) => {
+                alert("email sent successfully");
+              })
+              .catch();
+          }
+        </script>
+        <br />
+        <a href="Kaydian1.html" target="_blank">Lecture's Info</a>
+        <br />
+        <a href="Kaydian website.html" target="_blank">Main Page</a>
+      </form>
+    </div>
+  </body>
+</html>
